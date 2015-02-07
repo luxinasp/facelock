@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    tools:context=".PatternUnlock" >
+
+    <cn.edu.hit.facelock.GestureLockView
+        android:id="@+id/gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#0000" />
+		
+	<TextView
+	    android:id="@+id/plabel1"
+		android:layout_height="wrap_content"
+		android:text="请绘制图案"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+	<TextView
+	    android:id="@+id/plabel2"
+		android:layout_height="wrap_content"
+		android:text="绘制图案错误!"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+
+
+
+</RelativeLayout>

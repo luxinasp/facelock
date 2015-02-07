@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_weight="0.88"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="0.88">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<org.opencv.android.JavaCameraView
+					android:id="@+id/tutorial3_activity_java_surface_view"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="0.88"/>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<ImageView
+					android:id="@+id/imageView3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/ic_green"
+					android:layout_centerVertical="true"/>
+
+				<ImageView
+					android:id="@+id/imageView4"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/ic_yellow"
+					android:layout_centerVertical="true"/>
+
+				<ImageView
+					android:id="@+id/imageView2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/ic_red"
+					android:layout_centerVertical="true"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:text="使用图案锁"
+					android:layout_width="wrap_content"
+					android:layout_toRightOf="@id/imageView2"
+					android:id="@+id/matchfaceButton1"
+					android:layout_alignParentRight="false"
+					android:layout_centerVertical="true"/>
+
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

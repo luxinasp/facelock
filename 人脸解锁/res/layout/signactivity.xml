@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    tools:context=".SignActivity" >
+
+    <cn.edu.hit.facelock.GestureLockView2
+        android:id="@+id/gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#0000" />
+		
+	<TextView
+	    android:id="@+id/label1"
+		android:layout_height="wrap_content"
+		android:text="注册新用户，请绘制图案"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+	<TextView
+	    android:id="@+id/label2"
+		android:layout_height="wrap_content"
+		android:text="请再次绘制图案"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+	<TextView
+	    android:id="@+id/label3"
+		android:layout_height="wrap_content"
+		android:text="两次绘制图案不一致！"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+	<TextView
+	    android:id="@+id/label4"
+		android:layout_height="wrap_content"
+		android:text="新用户注册成功！"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_above="@id/gv"
+		android:gravity="center"/>
+
+
+</RelativeLayout>
