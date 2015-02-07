@@ -1,5 +1,7 @@
 package cn.edu.hit.facelock;
 
+import java.*;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
