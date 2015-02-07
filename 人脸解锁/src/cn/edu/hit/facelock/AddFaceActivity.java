@@ -268,7 +268,7 @@ public class AddFaceActivity extends Activity implements CvCameraViewListener2 {
 		int cols_end = (int)(0.5*(mGray.cols() + rows_lenght));
 		int cols_lenght = rows_lenght;
 		
-		int S = (int)(rows_lenght*cols_lenght*0.7);
+		int S = (int)(rows_lenght*cols_lenght*0.49);
 
 		//int S = 184320/2;
 		
