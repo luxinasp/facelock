@@ -281,21 +281,35 @@ public class MatchFace extends Activity implements CvCameraViewListener2 {
         mRgba = inputFrame.rgba();
         mGray = inputFrame.gray();
 		
-		
-		int rows_start = (int)0.167*mGray.rows();
-		int rows_end = (int)0.833*mGray.rows();
+		int rows_start = (int)(0.167*mGray.rows());
+		int rows_end = (int)(0.833*mGray.rows());
 		int rows_lenght = rows_end - rows_start;
-		int cols_start = (int)0.5*(mGray.cols() - rows_lenght);
-		int cols_end = (int)0.5*(mGray.cols() + rows_lenght);
+		int cols_start = (int)(0.5*(mGray.cols() - rows_lenght));
+		int cols_end = (int)(0.5*(mGray.cols() + rows_lenght));
 		int cols_lenght = rows_lenght;
+		
+		int S = (int)(rows_lenght*cols_lenght*0.7);
+		
+		//int rows_start = (int)0.167*mGray.rows();
+		//int rows_end = (int)0.833*mGray.rows();
+		//int rows_lenght = rows_end - rows_start;
+		//int cols_start = (int)0.5*(mGray.cols() - rows_lenght);
+		//int cols_end = (int)0.5*(mGray.cols() + rows_lenght);
+		//int cols_lenght = rows_lenght;
 
-		int S = 184320/2;
+		//int S = 184320/2;
 
-		Range rows = new Range(120,600);
-		Range cols = new Range(400,880);
+		//Range rows = new Range(120,600);
+		//Range cols = new Range(400,880);
 
-		Point tl = new Point(400,120);
-		Point br = new Point(880,600);
+		//Point tl = new Point(400,120);
+		//Point br = new Point(880,600);
+		
+		Range rows = new Range(rows_start,rows_end);
+		Range cols = new Range(cols_start,cols_end);
+		
+		Point tl = new Point(cols_start,rows_start);
+		Point br = new Point(cols_end,rows_end);
 
 
 		Mat new_mGray = new Mat(mGray,rows,cols);
@@ -322,8 +336,11 @@ public class MatchFace extends Activity implements CvCameraViewListener2 {
         
         if ((facesArray.length>0))
           {
-			  Point x = new Point(facesArray[0].tl().getx()+400,facesArray[0].tl().gety()+120);
-			  Point y = new Point(facesArray[0].br().getx()+400,facesArray[0].br().gety()+120);
+			  //Point x = new Point(facesArray[0].tl().getx()+400,facesArray[0].tl().gety()+120);
+			  //Point y = new Point(facesArray[0].br().getx()+400,facesArray[0].br().gety()+120);
+			  
+			  Point x = new Point(facesArray[0].tl().getx()+cols_start,facesArray[0].tl().gety()+rows_start);
+			  Point y = new Point(facesArray[0].br().getx()+cols_start,facesArray[0].br().gety()+rows_start);
 
 			  Core.rectangle(mRgba,x , y, FACE_RECT_COLOR, 3);
 			  
